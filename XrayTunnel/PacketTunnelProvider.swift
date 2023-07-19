@@ -223,12 +223,12 @@ extension MGConfiguration.Model {
             guard let trojan = self.trojan else {
                 throw NSError.newError("\(self.protocolType.description) 构建失败")
             }
-            proxy["settings"] = ["servers": [try JSONSerialization.jsonObject(with: try JSONEncoder().encode(trojan))]]
+            proxy["settings"] = ["servers": [try JSONSerialization.jsonObject(with: try JSONEncoder().encode(trojan.servers))]]
         case .shadowsocks:
             guard let shadowsocks = self.shadowsocks else {
                 throw NSError.newError("\(self.protocolType.description) 构建失败")
             }
-            proxy["settings"] = ["servers": [try JSONSerialization.jsonObject(with: try JSONEncoder().encode(shadowsocks))]]
+            proxy["settings"] = ["servers": [try JSONSerialization.jsonObject(with: try JSONEncoder().encode(shadowsocks.servers))]]
         }
         var streamSettings: [String: Any] = [:]
         streamSettings["network"] = self.network.rawValue
