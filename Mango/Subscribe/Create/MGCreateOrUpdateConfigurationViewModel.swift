@@ -38,6 +38,7 @@ final class MGCreateOrUpdateConfigurationViewModel: ObservableObject {
         configurationModel.vmess.flatMap { self.vmess = $0 }
         configurationModel.trojan.flatMap { self.trojan = $0 }
         configurationModel.shadowsocks.flatMap { self.shadowsocks = $0 }
+        configurationModel.socks.flatMap { self.socks = $0 }
         
         self.transport = configurationModel.network
         configurationModel.tcp.flatMap { self.tcp = $0 }
