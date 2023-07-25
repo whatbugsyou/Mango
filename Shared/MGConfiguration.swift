@@ -48,7 +48,7 @@ extension MGConfiguration {
         
         public var id: Self { self }
         
-        case vless, vmess, trojan, shadowsocks
+        case vless, vmess, trojan, shadowsocks, socks
         
         public var description: String {
             switch self {
@@ -60,6 +60,8 @@ extension MGConfiguration {
                 return "Trojan"
             case .shadowsocks:
                 return "Shadowsocks"
+            case .socks:
+                return "Socks"
             }
         }
     }
@@ -377,6 +379,17 @@ extension MGConfiguration {
         }
         public var servers: [Server] = [Server()]
     }
+    
+    public struct Socks: Codable {
+        public struct User: Codable {
+            public var user: String = ""
+            public var pass: String = ""
+            public var level: Int = 0
+        }
+        public var address: String = ""
+        public var port: Int = 443
+        public var users: [User] = [User()]
+    }
 }
 
 extension MGConfiguration {
@@ -388,6 +401,7 @@ extension MGConfiguration {
         public var vmess        : MGConfiguration.VMess?
         public var trojan       : MGConfiguration.Trojan?
         public var shadowsocks  : MGConfiguration.Shadowsocks?
+        public var socks       : MGConfiguration.Socks?
         
         public var network  : MGConfiguration.Transport
         public var tcp      : MGConfiguration.StreamSettings.TCP? = nil

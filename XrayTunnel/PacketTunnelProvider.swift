@@ -229,6 +229,11 @@ extension MGConfiguration.Model {
                 throw NSError.newError("\(self.protocolType.description) 构建失败")
             }
             proxy["settings"] = ["servers": try JSONSerialization.jsonObject(with: try JSONEncoder().encode(shadowsocks.servers))]
+        case .socks:
+            guard let socks = self.socks else {
+                throw NSError.newError("\(self.protocolType.description) 构建失败")
+            }
+            proxy["settings"] = ["servers": [try JSONSerialization.jsonObject(with: try JSONEncoder().encode(socks))]]
         }
         var streamSettings: [String: Any] = [:]
         streamSettings["network"] = self.network.rawValue

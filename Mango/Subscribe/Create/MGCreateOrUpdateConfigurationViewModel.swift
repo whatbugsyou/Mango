@@ -6,6 +6,7 @@ final class MGCreateOrUpdateConfigurationViewModel: ObservableObject {
     @Published var vmess        = MGConfiguration.VMess()
     @Published var trojan       = MGConfiguration.Trojan()
     @Published var shadowsocks  = MGConfiguration.Shadowsocks()
+    @Published var socks        = MGConfiguration.Socks()
     
     @Published var transport    = MGConfiguration.Transport.tcp
     @Published var tcp          = MGConfiguration.StreamSettings.TCP()
@@ -91,6 +92,8 @@ final class MGCreateOrUpdateConfigurationViewModel: ObservableObject {
             model.trojan = self.trojan
         case .shadowsocks:
             model.shadowsocks = self.shadowsocks
+        case .socks:
+            model.socks = self.socks
         }
         switch self.transport {
         case .tcp:

@@ -26,6 +26,8 @@ struct MGCreateOrUpdateConfigurationView: View {
                         MGConfigurationTrojanView(vm: vm)
                     case .shadowsocks:
                         MGConfigurationShadowsocksView(vm: vm)
+                    case .socks:
+                        MGConfigurationSocksView(vm: vm)
                     }
                 } header: {
                     Text("Server")

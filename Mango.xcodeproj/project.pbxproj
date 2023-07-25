@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180E5E422A7015F7000D3733 /* MGConfigurationSocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E5E412A7015F7000D3733 /* MGConfigurationSocksView.swift */; };
 		7000C6DE295D5F690005626E /* MGConnectedDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7000C6DD295D5F690005626E /* MGConnectedDurationView.swift */; };
 		7000C6E4295D635F0005626E /* MGControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7000C6E3295D635F0005626E /* MGControlView.swift */; };
 		702D908A299B58A400B83324 /* MGNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D9089299B58A400B83324 /* MGNotification.swift */; };
@@ -121,6 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180E5E412A7015F7000D3733 /* MGConfigurationSocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConfigurationSocksView.swift; sourceTree = "<group>"; };
 		7000C6DD295D5F690005626E /* MGConnectedDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConnectedDurationView.swift; sourceTree = "<group>"; };
 		7000C6E3295D635F0005626E /* MGControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGControlView.swift; sourceTree = "<group>"; };
 		702D9088299B54FD00B83324 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				70F82CCD29C978850072B334 /* MGConfigurationVLESSView.swift */,
 				70F82CCF29C9789F0072B334 /* MGConfigurationVMessView.swift */,
 				70F82CD729C990FF0072B334 /* MGConfigurationTrojanView.swift */,
+				180E5E412A7015F7000D3733 /* MGConfigurationSocksView.swift */,
 				70F82CD529C990E60072B334 /* MGConfigurationShadowsocksView.swift */,
 				70F82CD129C978B30072B334 /* MGConfigurationTransportView.swift */,
 				70F82CD329C978CF0072B334 /* MGConfigurationSecurityView.swift */,
@@ -571,6 +574,7 @@
 				70B89C2929C19D49003DA577 /* MGLogModel.swift in Sources */,
 				70F82CE429CC10070072B334 /* MGRouteModel.swift in Sources */,
 				70F82CD029C9789F0072B334 /* MGConfigurationVMessView.swift in Sources */,
+				180E5E422A7015F7000D3733 /* MGConfigurationSocksView.swift in Sources */,
 				70B89C2C29C19E9C003DA577 /* MGLogViewModel.swift in Sources */,
 				70B89C2629C198E3003DA577 /* MGAssetEntranceView.swift in Sources */,
 				706DB6BD29B9DFE3002F22C7 /* MGConfiguration.swift in Sources */,
@@ -621,7 +625,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XrayTunnel/XrayTunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AB24HS2Y9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XrayTunnel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XrayTunnel;
@@ -636,7 +642,9 @@
 					"$(PROJECT_DIR)/XrayTunnel",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${APP_ID}.${TUNNEL_BUNDLE_SUFFIX_XRAY}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.akproxy.mango.XrayTunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -647,7 +655,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XrayTunnel/XrayTunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AB24HS2Y9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XrayTunnel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XrayTunnel;
@@ -662,7 +672,9 @@
 					"$(PROJECT_DIR)/XrayTunnel",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${APP_ID}.${TUNNEL_BUNDLE_SUFFIX_XRAY}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.akproxy.mango.XrayTunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -792,13 +804,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mango/Mango.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Mango/Preview Content\"";
+				DEVELOPMENT_TEAM = AB24HS2Y9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mango/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mango;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "扫描分享的二维码";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -809,7 +824,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${APP_ID}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.akproxy.mango;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -825,13 +842,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mango/Mango.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Mango/Preview Content\"";
+				DEVELOPMENT_TEAM = AB24HS2Y9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mango/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mango;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "扫描分享的二维码";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -842,7 +862,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${APP_ID}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.akproxy.mango;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
